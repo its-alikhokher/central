@@ -47,7 +47,15 @@ app_license = "mit"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
+doctype_js = {
+    "Sales Invoice": ["public/js/customer_branches_sales.js", "public/js/item_prices_select.js", "public/js/hide_qty_on_return.js"],
+    "Delivery Note": ["public/js/customer_branches_sales.js", "public/js/item_prices_select.js"],
+    "Sales Order": ["public/js/customer_branches_sales.js", "public/js/item_prices_select.js"],
+    "Purchase Invoice": ["public/js/item_prices_select.js", "public/js/hide_qty_on_return.js"],
+    "Purchase Order": ["public/js/item_prices_select.js"],
+    "Purchase Receipt": ["public/js/item_prices_select.js"],
+    "Quotation": ["public/js/item_prices_select.js"]
+}
 # Svg Icons
 # ------------------
 # include app icons in desk
@@ -145,6 +153,25 @@ app_license = "mit"
 # 	}
 # }
 
+doc_events = {
+    '*': {
+        "before_insert": ["controls.custom.sales_invoice_custom.on_validate",  "controls.utils.run_server_script_for_doc_event"],
+        "after_insert": "controls.utils.run_server_script_for_doc_event",
+        "before_validate": "controls.utils.run_server_script_for_doc_event",
+        "validate": "controls.utils.run_server_script_for_doc_event",
+        "on_update": "controls.utils.run_server_script_for_doc_event",
+        "before_submit": "controls.utils.run_server_script_for_doc_event",
+        "on_submit": "controls.utils.run_server_script_for_doc_event",
+        "before_cancel": "controls.utils.run_server_script_for_doc_event",
+        "on_cancel": "controls.utils.run_server_script_for_doc_event",
+        "on_trash": "controls.utils.run_server_script_for_doc_event",
+        "after_delete": "controls.utils.run_server_script_for_doc_event",
+        "before_update_after_submit": "controls.utils.run_server_script_for_doc_event",
+        "on_update_after_submit": "controls.utils.run_server_script_for_doc_event"
+    }
+}
+
+
 # Scheduled Tasks
 # ---------------
 
@@ -234,6 +261,9 @@ app_license = "mit"
 # auth_hooks = [
 # 	"controls.auth.validate"
 # ]
+auth_hooks = [
+	"controls.tasks.logout_expired_sessions"
+]
 
 # Automatically update python controller files with type annotations for this app.
 # export_python_type_annotations = True

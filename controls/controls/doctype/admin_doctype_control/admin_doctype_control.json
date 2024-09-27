@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-23 18:03:34.212082",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_drdl",
+  "expire_date",
+  "column_break_ldwl",
+  "section_break_nsef",
+  "doctype_list_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_drdl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "expire_date",
+   "fieldtype": "Date",
+   "label": "Expire Date"
+  },
+  {
+   "fieldname": "column_break_ldwl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_nsef",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "doctype_list_table",
+   "fieldtype": "Table",
+   "label": "Doctype List Table",
+   "options": "Doctype List Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-27 16:16:42.471309",
+ "modified_by": "Administrator",
+ "module": "Controls",
+ "name": "Admin Doctype Control",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
