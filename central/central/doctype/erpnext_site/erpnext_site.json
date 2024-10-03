@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:site_url",
+ "creation": "2024-06-01 13:56:01.704176",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "erpnext_customer",
+  "site_url",
+  "column_break_ffuy",
+  "status",
+  "update_on_save",
+  "credentials_section_section",
+  "password",
+  "protocol",
+  "column_break_qmsj",
+  "subscription_expiry",
+  "package_details_section",
+  "package",
+  "section_break_qibe",
+  "limits",
+  "price_section_section",
+  "currency",
+  "column_break_vnag",
+  "monthly_price",
+  "yearly_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "erpnext_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ERPNext Customer",
+   "options": "ERPNext Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "site_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site URL",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "credentials_section_section",
+   "fieldtype": "Section Break",
+   "label": "Credentials & Expiry"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "package_details_section",
+   "fieldtype": "Section Break",
+   "label": "Package Details"
+  },
+  {
+   "fieldname": "package",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Package",
+   "options": "ERPNext Packages",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qmsj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscription_expiry",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Subscription Expiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ffuy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nExpired",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_qibe",
+   "fieldtype": "Section Break",
+   "label": "Limits"
+  },
+  {
+   "fieldname": "limits",
+   "fieldtype": "Table",
+   "options": "ERPNext Site Limit"
+  },
+  {
+   "fieldname": "price_section_section",
+   "fieldtype": "Section Break",
+   "label": "Price Section"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "monthly_price",
+   "fieldtype": "Currency",
+   "label": "Monthly Price",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vnag",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "yearly_price",
+   "fieldtype": "Currency",
+   "label": "Yearly Price",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "default": "Https",
+   "fieldname": "protocol",
+   "fieldtype": "Select",
+   "label": "Protocol",
+   "options": "Http\nHttps"
+  },
+  {
+   "default": "0",
+   "fieldname": "update_on_save",
+   "fieldtype": "Check",
+   "label": "Update Site on Save"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-07 16:04:05.133768",
+ "modified_by": "Administrator",
+ "module": "Central",
+ "name": "ERPNext Site",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

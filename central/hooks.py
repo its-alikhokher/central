@@ -148,23 +148,24 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"central.tasks.all"
-# 	],
-# 	"daily": [
-# 		"central.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"central.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"central.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"central.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"central.tasks.all"
+	# ],
+	"daily": [
+		"central.central.doctype.erpnext_site.erpnext_site.update_expiry_of_site"
+	],
+	# "hourly": [
+	# 	"central.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"central.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"central.tasks.monthly"
+	# ],
+}
+
 
 # Testing
 # -------
